@@ -1,7 +1,7 @@
 import './app.scss';
 import { useState } from 'react';
 import ReactplosiveModal from './components/ReactplosiveModal';
-import GithubCorner from 'react-github-corner';
+//import GithubCorner from 'react-github-corner';
 
 function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -9,11 +9,12 @@ function App() {
   return (
     <div>
       <div className="container">
+        {/* 
         <GithubCorner
           bannerColor={'#bd93f9'}
           size={60}
           href="https://github.com/username/repo"
-        />
+        />*/}
         <header>
           <h1>🔥 Reactplosive Modal 🔥</h1>
           <p>A simple React modal component with an explosion effect</p>
