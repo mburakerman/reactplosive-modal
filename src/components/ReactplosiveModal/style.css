@@ -1,6 +1,11 @@
 .reactplosive-modal {
   color: #44475a;
   display: none;
+
+  --width: 100%;
+  --maxWidth: 95%;
+  --backgroundColor: #fff;
+  --transition: cubic-bezier(1, 0.3, 0, -0.1);
 }
 .reactplosive-modal--active {
   display: block;
@@ -15,19 +20,15 @@
   padding: 0;
   cursor: pointer;
   line-height: 1;
-  &:hover {
-    svg {
-      line {
-        stroke: #ff5555;
-      }
-    }
-  }
+}
+.reactplosive-modal-close:hover svg line {
+  stroke: #f55;
 }
 
 .reactplosive-modal-container {
-  background: #fff;
-  max-width: 95%;
-  width: 450px;
+  background: var(--backgroundColor);
+  width: var(--width);
+  max-width: var(--maxWidth);
   height: auto;
   position: fixed;
   left: 50%;
@@ -37,12 +38,12 @@
   border-radius: 8px;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.7);
-  transition: all 0.2s 0s cubic-bezier(1, 0.3, 0, -0.1);
+  transition: all 0.2s 0s var(--transition);
 }
 .reactplosive-modal-container---active {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
-  transition: all 0.2s 0.1s cubic-bezier(1, 0.3, 0, -0.1);
+  transition: all 0.2s 0.1s var(--transition);
 }
 
 .reactplosive-modal-header {
@@ -53,6 +54,7 @@
   font-size: 25px;
   font-weight: 500;
 }
+
 .reactplosive-modal-content {
   margin-top: 20px;
 }

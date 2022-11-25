@@ -1,11 +1,12 @@
-import { ReactNode, useEffect, useState } from "react";
-import "./style.scss";
-import explosionGif from "./explosion-gif";
+import { ReactNode, useEffect, useState } from 'react';
+import './style.css';
+import explosionGif from './explosion-gif';
 
 type Props = {
   title?: ReactNode;
   children: ReactNode;
   isVisible: boolean;
+  width: string;
   onClose: (visibility: boolean) => void;
   outsideClickEnabled?: boolean;
 };
@@ -16,6 +17,7 @@ const ReactplosiveModal = ({
   isVisible,
   onClose,
   outsideClickEnabled = true,
+  width = '500px',
 }: Props) => {
   const [active, setActive] = useState(false);
 
@@ -28,16 +30,19 @@ const ReactplosiveModal = ({
     <div
       className={
         isVisible
-          ? "reactplosive-modal reactplosive-modal--active"
-          : "reactplosive-modal"
+          ? 'reactplosive-modal reactplosive-modal--active'
+          : 'reactplosive-modal'
       }
     >
       <div
         className={
           active
-            ? "reactplosive-modal-container reactplosive-modal-container---active"
-            : "reactplosive-modal-container"
+            ? 'reactplosive-modal-container reactplosive-modal-container---active'
+            : 'reactplosive-modal-container'
         }
+        style={{
+          width,
+        }}
       >
         <button
           className="reactplosive-modal-close"
@@ -51,7 +56,7 @@ const ReactplosiveModal = ({
           </div>
         ) : null}
 
-        <div className={"reactplosive-modal-content"}>{children}</div>
+        <div className={'reactplosive-modal-content'}>{children}</div>
       </div>
       <div
         className="reactplosive-modal-bg"
@@ -59,14 +64,14 @@ const ReactplosiveModal = ({
       >
         <img
           className="reactplosive-modal-explosion-gif"
-          src={isVisible ? explosionGif : ""}
+          src={isVisible ? explosionGif : ''}
         />
       </div>
     </div>
   );
 };
 
-const CloseIcon = ({ color = "rgba(0, 0, 0, 0.2)" }: { color?: string }) => {
+const CloseIcon = ({ color = 'rgba(0, 0, 0, 0.2)' }: { color?: string }) => {
   return (
     <svg
       width="12"
