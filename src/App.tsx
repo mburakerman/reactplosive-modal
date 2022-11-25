@@ -1,7 +1,7 @@
-import './app.scss';
-import { useState } from 'react';
-import ReactplosiveModal from './components/ReactplosiveModal';
-import GithubCorner from 'react-github-corner';
+import "./app.scss";
+import { useState } from "react";
+import ReactplosiveModal from "./components/ReactplosiveModal";
+import GithubCorner from "react-github-corner";
 
 function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -10,9 +10,9 @@ function App() {
     <div>
       <div className="container">
         <GithubCorner
-          bannerColor={'#bd93f9'}
+          bannerColor={"#bd93f9"}
           size={60}
-          href="https://github.com/username/repo"
+          href="https://github.com/mburakerman/reactplosive-modal"
         />
         <header>
           <h1>🔥 Reactplosive Modal 🔥</h1>
@@ -32,7 +32,7 @@ function App() {
         <section>
           <h2>⏬ Install</h2>
           <pre>
-            <code>npm i reactplosive-modal --save</code>
+            <code>npm i reactplosive-modal</code>
             <br />
             <code>yarn add reactplosive-modal</code>
           </pre>
@@ -41,10 +41,14 @@ function App() {
         <section>
           <h2>🐙 More</h2>
           <p>
-            You can also customize the markup as you wish. <br /> Go{' '}
-            <a href="https://github.com/mburakerman/ " target="_blank">
+            You can also customize the markup as you wish. <br /> Go{" "}
+            <a
+              href="https://github.com/mburakerman/reactplosive-modal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Github page
-            </a>{' '}
+            </a>{" "}
             to see more details.
           </p>
         </section>
