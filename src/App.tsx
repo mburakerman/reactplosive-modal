@@ -1,6 +1,6 @@
 import "./app.scss";
 import { useState } from "react";
-import ReactplosiveModal from "./components/ReactplosiveModal";
+import ReactplosiveModal from "reactplosive-modal";
 import GithubCorner from "react-github-corner";
 
 function App() {
