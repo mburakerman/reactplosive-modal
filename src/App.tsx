@@ -1,7 +1,7 @@
-import "./app.scss";
-import { useState } from "react";
-import ReactplosiveModal from "./components/ReactplosiveModal";
-import GithubCorner from "react-github-corner";
+import './app.scss';
+import { useState } from 'react';
+import ReactplosiveModal from './components/ReactplosiveModal';
+import GithubCorner from 'react-github-corner';
 
 function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -10,7 +10,7 @@ function App() {
     <div>
       <div className="container">
         <GithubCorner
-          bannerColor={"#bd93f9"}
+          bannerColor={'#bd93f9'}
           size={60}
           href="https://github.com/username/repo"
         />
@@ -20,7 +20,7 @@ function App() {
         </header>
 
         <section>
-          <h2>🕹️ Demo</h2>
+          <h2>🪡 Demo</h2>
           <button
             className="show-modal-button"
             onClick={() => setIsModalVisible(!isModalVisible)}
@@ -41,17 +41,17 @@ function App() {
         <section>
           <h2>🐙 More</h2>
           <p>
-            You can also customize the markup as you wish. <br /> Go{" "}
+            You can also customize the markup as you wish. <br /> Go{' '}
             <a href="https://github.com/mburakerman/ " target="_blank">
               Github page
-            </a>{" "}
+            </a>{' '}
             to see more details.
           </p>
         </section>
       </div>
 
       <ReactplosiveModal
-        title={<h4>🔥 Boom</h4>}
+        title={<h4>🔥 Boo</h4>}
         isVisible={isModalVisible}
         onClose={() => {
           setIsModalVisible(false);
@@ -61,7 +61,7 @@ function App() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet a
           tenetur delectus reprehenderit, omnis doloremque at earum officia unde
           sequi accusantium corporis praesentium deserunt laboriosam dignissimos
-          voluptatum culpa molestiae ullam. 👻
+          voluptatum culpa molestiae ullam.
         </p>
         <br />
         <button className="button">I do nothing.</button>
