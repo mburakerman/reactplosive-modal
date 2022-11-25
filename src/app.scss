@@ -1,0 +1,130 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+$background: #282a36;
+$foreground: #f8f8f2;
+$pink: #ff79c6;
+$purple: #bd93f9;
+$green: #50fa7b;
+$code: #6272a4;
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1.05px;
+  line-height: 1.5;
+  font-family: "Varela Round", sans-serif;
+}
+
+body {
+  background: $background;
+  color: $foreground;
+}
+
+h1,
+h2 {
+  color: $purple;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+h2 {
+  margin-bottom: 15px;
+}
+
+pre {
+  background-color: $code;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  code {
+    font-size: 90%;
+  }
+}
+
+section {
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  &:last-child {
+    border: none;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 20px 20px;
+  margin-bottom: 30px;
+}
+
+a {
+  color: $pink;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.show-modal-button {
+  background-color: $green;
+  border: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 3px 3px 20px rgb(255 255 255 / 15%);
+  transition: all 0.2s linear;
+  color: $background;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.container {
+  max-width: 720px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+// button
+.button {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 1rem;
+  padding: 10px 12px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+}
