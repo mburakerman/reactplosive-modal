@@ -1,0 +1,49 @@
+{
+  "name": "reactplosive-modal",
+  "version": "1.0.5",
+  "description": "A simple React modal component with an explosion effect",
+  "author": "mburakerman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mburakerman/reactplosive-modal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mburakerman/reactplosive-modal/issues"
+  },
+  "homepage": "https://github.com/mburakerman/reactplosive-modal",
+  "keywords": [
+    "modal",
+    "popup",
+    "react-modal",
+    "explosive-modal",
+    "reactplosive-modal"
+  ],
+  "type": "module",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/"
+  ],
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:parcel": "parcel build src/components/ReactplosiveModal/index.tsx"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@parcel/packager-ts": "^2.8.2",
+    "@parcel/transformer-typescript-types": "^2.8.2",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "parcel": "^2.8.2",
+    "react-github-corner": "^2.5.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
+  }
+}
