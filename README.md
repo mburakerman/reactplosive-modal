@@ -4,7 +4,7 @@
 
 <br />
 
-![NPM](https://img.shields.io/npm/v/reactplosive-modal)
+[![NPM](https://img.shields.io/npm/v/reactplosive-modal)](https://www.npmjs.com/package/reactplosive-modal)
 ![NPM License](https://img.shields.io/npm/l/reactplosive-modal)
 
 <br />
