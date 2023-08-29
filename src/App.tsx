@@ -2,6 +2,7 @@ import "./app.scss";
 import { useState } from "react";
 import ReactplosiveModal from "./components/ReactplosiveModal";
 import GithubCorner from "react-github-corner";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -9,47 +10,29 @@ function App() {
   return (
     <div>
       <div className="container">
+        <AnimatedCursor
+          showSystemCursor={true}
+          children={<img width="25" src={"fire.gif"} />}
+          color="189, 147, 249"
+        />
         <GithubCorner
-          bannerColor={"#bd93f9"}
+          bannerColor={"rgba(189, 147, 249, 0.25)"}
           size={60}
           href="https://github.com/mburakerman/reactplosive-modal"
+          target="_blank"
         />
+
         <header>
-          <h1>🔥 Reactplosive Modal 🔥</h1>
+          <h1>Reactplosive Modal</h1>
           <p>A simple React modal component with an explosion effect</p>
         </header>
 
-        <section>
-          <h2>🪡 Demo</h2>
-          <button
-            className="show-modal-button"
-            onClick={() => setIsModalVisible(!isModalVisible)}
-          >
-            Show Modal
-          </button>
-        </section>
-
-        <section>
-          <h2>⏬ Install</h2>
-          <pre>
-            <code>npm i reactplosive-modal</code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>🐙 More</h2>
-          <p>
-            You can also customize the markup as you wish. <br /> Go{" "}
-            <a
-              href="https://github.com/mburakerman/reactplosive-modal"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github page
-            </a>{" "}
-            to see more details.
-          </p>
-        </section>
+        <button
+          className="show-modal-button"
+          onClick={() => setIsModalVisible(!isModalVisible)}
+        >
+          ✨ Show Modal ✨
+        </button>
       </div>
 
       <ReactplosiveModal

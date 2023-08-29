@@ -12,6 +12,7 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -28,6 +29,7 @@ html {
 body {
   background: $background;
   color: $foreground;
+  height: 100%;
 }
 
 h1,
@@ -37,29 +39,17 @@ h2 {
 
 h1 {
   margin-bottom: 20px;
-}
-h2 {
-  margin-bottom: 15px;
+  font-size: 40px;
 }
 
-pre {
-  background-color: $code;
-  border-radius: 4px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  code {
-    font-size: 90%;
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 32px;
   }
 }
-
-section {
-  margin-bottom: 20px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  &:last-child {
-    border: none;
+@media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 27px;
   }
 }
 
@@ -67,37 +57,38 @@ header {
   text-align: center;
   padding: 20px 20px;
   margin-bottom: 30px;
-}
-
-a {
-  color: $pink;
-  &:hover {
+  p {
     opacity: 0.9;
   }
 }
 
+.container {
+  max-width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .show-modal-button {
-  background-color: $green;
+  background-color: rgba(189, 147, 249, 0.7);
   border: none;
-  font-size: 16px;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px 40px;
+  border-radius: 10px;
   box-shadow: 3px 3px 20px rgb(255 255 255 / 15%);
   transition: all 0.2s linear;
-  color: $background;
+  color: #fff;
+  cursor: pointer;
   &:hover {
     box-shadow: none;
   }
 }
 
-.container {
-  max-width: 720px;
-  padding: 0 20px;
-  margin: 0 auto;
-}
-
-// button
 .button {
   align-items: center;
   background-color: #ffffff;
@@ -124,6 +115,7 @@ a {
   vertical-align: baseline;
   width: auto;
 }
+
 .button:hover,
 .button:focus {
   border-color: rgba(0, 0, 0, 0.15);
